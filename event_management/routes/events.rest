@@ -1,0 +1,40 @@
+
+
+### GET Request
+
+GET http://localhost:5001/events
+
+###  GET by ID
+
+GET http://localhost:5001/events/692eeb07417894bd0a9c5b0e
+
+### POST Request
+
+POST http://localhost:5001/events HTTP/1.1
+Content-Type: application/json 
+
+{
+    "title": "DevFest",
+    "location": "LagosNigeria",
+    "description": "An event for all to coma and learn about Technology.",
+    "ticketCost": 5000,
+    "capacity": 75
+}
+
+### PUT Request
+
+PUT http://localhost:5001/events/692ef2eb417894bd0a9c5b0f HTTP/1.1
+Content-Type: application/json
+
+{
+"title": "Dev",
+"location": "New York",
+ "description": "An event for all to coma and learn about Technology and The other good stufs.",
+"ticketCost": 5000,
+"capacity": 75
+}
+
+
+### DELETE Request
+
+DELETE  http://localhost:5001/events/693030790fc6d8b1f4bc0e5c 

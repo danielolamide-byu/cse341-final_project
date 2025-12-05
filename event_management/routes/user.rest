@@ -1,0 +1,41 @@
+
+### GET Request.
+
+GET http://localhost:5001/users
+
+
+### GET by Id Request.
+
+GET http://localhost:5001/users/6930378f1b327c62bb603ff9
+
+
+### POST Request
+
+
+POST http://localhost:5001/users HTTP/1.1
+Content-Type: application/json 
+
+{
+    "name": "Daniel",
+    "age": 17,
+    "email": "olamidedanielgmail.com",
+    "phoneNumber": 8152871819
+}
+
+### PUT Request
+
+PUT http://localhost:5001/users/693037801b327c62bb603ff8 HTTP/1.1
+Content-Type: application/json
+
+{
+     "name": "Mary",
+    "age": 17,
+    "email": "olamidedanielgmail.com",
+    "phone
+    Number": 8152871819
+}
+
+
+### DELETE Request
+DELETE http://localhost:5001/users
+
