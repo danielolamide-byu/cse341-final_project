@@ -10,7 +10,8 @@ const userValidator = (userData) => {
         email: Joi.string()
             .required(),
         phoneNumber: Joi.number()
-            .required()
+            .required(),
+        nationality: Joi.string()
     })
     
     return userScheme.validate(userData);

@@ -196,20 +196,20 @@
             "schema": {
                 "type": "object",
                 "properties": {
-                  "title": {
+                  "name": {
                     "example": "any"
                   },
-                  "location": {
+                  "age": {
                     "example": "any"
                   },
-                  "description": {
+                  "email": {
                     "example": "any"
                   },
-                  "ticketCost": {
-                    "example": "any"
+                  "phoneNumber": {
+                    "example": 9157503021
                   },
-                  "capacity": {
-                    "example": 75
+                  "nationality": {
+                    "example": "Nigerian"
                   }
                 }
             }
@@ -267,20 +267,20 @@
             "schema": {
                 "type": "object",
                 "properties": {
-                  "title": {
+                  "name": {
                     "example": "any"
                   },
-                  "location": {
+                  "age": {
                     "example": "any"
                   },
-                  "description": {
+                  "email": {
                     "example": "any"
                   },
-                  "ticketCost": {
+                  "phoneNumber": {
                     "example": "any"
                   },
-                  "capacity": {
-                    "example": 75
+                  "nationality": {
+                    "example": "American"
                   }
                 }
             }
