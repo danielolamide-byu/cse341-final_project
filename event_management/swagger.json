@@ -33,8 +33,37 @@
           }
         }
       },
+
+
       "post": {
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "example": "any"
+                  },
+                  "location": {
+                    "example": "any"
+                  },
+                  "description": {
+                    "example": "any"
+                  },
+                  "ticketCost": {
+                    "example": "any"
+                  },
+                  "capacity": {
+                    "example": 75
+                  }
+                }
+            }
+          }
+      ],
+
         "responses": {
           "201": {
             "description": "Created"
@@ -47,7 +76,11 @@
           }
         }
       }
+
+
     },
+
+
     "/events/{id}": {
       "get": {
         "description": "",
@@ -68,6 +101,8 @@
           }
         }
       },
+
+
       "put": {
         "description": "",
         "parameters": [
@@ -76,8 +111,32 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "example": "any"
+                  },
+                  "location": {
+                    "example": "any"
+                  },
+                  "description": {
+                    "example": "any"
+                  },
+                  "ticketCost": {
+                    "example": "any"
+                  },
+                  "capacity": {
+                    "example": 75
+                  }
+                }
+            }
           }
-        ],
+      ],
         "responses": {
           "200": {
             "description": "OK"
@@ -90,6 +149,8 @@
           }
         }
       },
+
+
       "delete": {
         "description": "",
         "parameters": [
@@ -110,6 +171,8 @@
         }
       }
     },
+
+
     "/users/": {
       "get": {
         "description": "",
@@ -122,8 +185,36 @@
           }
         }
       },
+
+
       "post": {
         "description": "",
+          "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "example": "any"
+                  },
+                  "location": {
+                    "example": "any"
+                  },
+                  "description": {
+                    "example": "any"
+                  },
+                  "ticketCost": {
+                    "example": "any"
+                  },
+                  "capacity": {
+                    "example": 75
+                  }
+                }
+            }
+          }
+      ],
         "responses": {
           "201": {
             "description": "Created"
@@ -137,6 +228,8 @@
         }
       }
     },
+
+
     "/users/{id}": {
       "get": {
         "description": "",
@@ -157,6 +250,8 @@
           }
         }
       },
+
+
       "put": {
         "description": "",
         "parameters": [
@@ -165,8 +260,33 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "example": "any"
+                  },
+                  "location": {
+                    "example": "any"
+                  },
+                  "description": {
+                    "example": "any"
+                  },
+                  "ticketCost": {
+                    "example": "any"
+                  },
+                  "capacity": {
+                    "example": 75
+                  }
+                }
+            }
           }
-        ],
+      ],
+    
         "responses": {
           "201": {
             "description": "Created"
@@ -176,6 +296,8 @@
           }
         }
       },
+
+
       "delete": {
         "description": "",
         "parameters": [
