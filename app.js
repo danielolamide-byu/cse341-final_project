@@ -33,7 +33,7 @@ app.get('/auth/google',
 
 app.get('/google/callback',
     passport.authenticate('google', {
-        successRedirect: '/',
+        successRedirect: '/api-docs',
         failureRedirect: '/auth/failure',
     })
 );
