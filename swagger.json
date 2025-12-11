@@ -8,6 +8,7 @@
   "host": "cse341-final-project-1-zd3d.onrender.com",
   "basePath": "/",
   "schemes": [
+    "https",
     "http"
   ],
   "paths": {
