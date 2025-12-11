@@ -1,0 +1,36 @@
+
+
+### GET  Request.
+
+GET http://localhost:5001/reviews
+
+### GET by Id Request.
+GET http://localhost:5001/reviews/6937f406e612c4c28635b3f0
+
+### POST Request
+
+POST http://localhost:5001/reviews HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Improvement for ads.",
+    "date": "now",
+    "description": "This review is intended to help improve the ads reach.",
+    "purpose": "Quick implementation."
+}
+
+### PUT Request
+
+PUT http://localhost:5001/reviews/6937fbea615e7fd229ba156b HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Improvement for ads.",
+    "date": "now and continually.",
+    "description": "This review is intended to help improve the ads reach.",
+    "purpose": "Quick implementation."
+}
+
+### DELETE Request
+
+DELETE http://localhost:5001/reviews/6937fbea615e7fd229ba156b

@@ -1,0 +1,36 @@
+
+
+### GET  Request.
+
+GET http://localhost:5001/registrations
+
+### GET by Id Request.
+GET http://localhost:5001/registrations/6937680081790eefb55c87bd
+
+### POST Request
+
+POST http://localhost:5001/registrations HTTP/1.1
+Content-Type: application/json
+
+{
+    "date": "Nice.",
+    "description": "A great description",
+    "purpose": "A greater purpose",
+    "registrationAmount": 10000
+}
+
+### PUT Request
+
+PUT http://localhost:5001/registrations/6937e80efb18dc362b453eae HTTP/1.1
+Content-Type: application/json
+
+{
+    "date": "Nicely.",
+    "description": "A greater description",
+    "purpose": "A greater purpose",
+    "registrationAmount": 10000
+}
+
+### DELETE Request
+
+DELETE http://localhost:5001/registrations/6937e80efb18dc362b453eae

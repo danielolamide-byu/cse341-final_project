@@ -8,7 +8,7 @@
   "host": "cse341-final-project-1-zd3d.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/": {
@@ -21,6 +21,8 @@
         }
       }
     },
+
+
     "/events/": {
       "get": {
         "description": "",
@@ -173,6 +175,8 @@
     },
 
 
+
+
     "/users/": {
       "get": {
         "description": "",
@@ -290,6 +294,309 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+
+
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+
+
+
+
+    "/registrations/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+
+
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "example": "20-10-2026"
+                  },
+                  "description": {
+                    "example": "The newest Event"
+                  },
+                  "purpose": {
+                    "example": "A really Purpose"
+                  },
+                  "registrationAmount": {
+                    "example": 7000
+                  }
+                }
+            }
+          }
+      ],
+
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+
+
+    },
+
+
+    "/registrations/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+
+
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "example": "10-10-2024"
+                  },
+                  "description": {
+                    "example": "A really Great Purpose"
+                  },
+                  "purpose": {
+                    "example": "Great Purpose."
+                  },
+                  "registrationAmount": {
+                    "example": 1900
+                  }
+                }
+            }
+          }
+      ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+
+
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+
+
+
+
+
+
+
+
+
+
+
+     "/reviews/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+
+
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "example": "This is the first review."
+                  },
+                  "date": {
+                    "example": "11-02-2025"
+                  },
+                  "description": {
+                    "example": "The first review for this event."
+                  },
+                  "purpose": {
+                    "example": "To help grow the post"
+                  }
+                }
+            }
+          }
+      ],
+
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+
+
+    },
+
+
+    "/reviews/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+
+
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "example": "A really Great Review."
+                  },
+                  "date": {
+                    "example": "10-11-2026."
+                  },
+                  "description": {
+                    "example": "Great Review."
+                  },
+                  "purpose": {
+                    "example": "The make know the effect and contribution of the page."
+                  }
+                }
+            }
+          }
+      ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"

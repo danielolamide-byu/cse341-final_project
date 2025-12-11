@@ -13,7 +13,7 @@ const getAll = async (req, res) => {
         })
     } catch (error) {
         console.log("Error while trying to fetch users.", error);
-        res.status(500).json("Cannot fetch users at the moment.", error);
+        res.status(500).send("Cannot fetch users at the moment.", error);
     }
 }
 

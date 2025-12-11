@@ -16,7 +16,7 @@ const getAll = async (req, res) => {
     })
     }
     catch (error) {
-        res.status(500).json("Error fetching events.", error);
+        res.status(200).json("Error fetching events.", error);
     }
 };
 

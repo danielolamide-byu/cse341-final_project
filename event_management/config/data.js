@@ -12,7 +12,8 @@ const initdb = (callback) => {
         console.log("DB initialized");
         return callback(null, database);
     }
-    MongoClient.connect(process.env.MONGO_URL)
+    const connect = process.env.MONGO_URL
+    MongoClient.connect(connect)
         .then((client) => {
             database = client;
             callback(null, database);
@@ -20,6 +21,8 @@ const initdb = (callback) => {
         .catch((err) => {
             callback(err)
         });
+        // console.log("DB Connection String Used:", connect)
+    
 };
 
 const getDatabase = () => {
