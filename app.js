@@ -49,10 +49,6 @@ app.get('auth/failure', (req, res) => {
 // })
 
 
-
-
-  
-
 const port = 5001;
 
 mongodb.initdb((err) => {
