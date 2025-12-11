@@ -9,8 +9,8 @@ const isAuthenticated = require('../middleware/auth');
 
 router.get('/', user.getAll);
 router.get('/:id', user.getSingle);
-router.post('/', isAuthenticated, user.createUser);
-router.put('/:id', isAuthenticated, user.updateUser)
-router.delete('/:id', isAuthenticated, user.deleteUser);
+router.post('/',  user.createUser);
+router.put('/:id',  user.updateUser)
+router.delete('/:id',  user.deleteUser);
 
 module.exports = router;

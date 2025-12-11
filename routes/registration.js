@@ -11,8 +11,8 @@ const isAuthenticated = require('../middleware/auth');
 
 router.get('/', registration.getAll);
 router.get('/:id', registration.getSingle)
-router.post('/', isAuthenticated, registration.createRegistration);
-router.put('/:id', isAuthenticated, registration.updateRegistration);
-router.delete('/:id', isAuthenticated, registration.deleteRegistration);
+router.post('/',  registration.createRegistration);
+router.put('/:id',  registration.updateRegistration);
+router.delete('/:id',  registration.deleteRegistration);
 
 module.exports = router;
